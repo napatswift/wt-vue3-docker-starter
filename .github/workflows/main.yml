@@ -1,13 +1,17 @@
-name: Docker Compose Actions Workflow
+name: Build and deploy to gh-page
 on: push
 jobs:
-  test:
+  build-and-deploy:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
       - name: Build the stack
         run: docker-compose up -d
       - name: Install
-        run: docker-compose exec -i app npm install
-      - name: Run Dev
-        run: docker-compose exec -i app npm run dev
+        run: docker-compose exec -i app npm ci
+      - name: Build
+        run: docker-compose exec -i app npm run build
+      - name: Deploy 🚀
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          folder: build # The folder the action should deploy.
