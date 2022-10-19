@@ -1,1 +1,0 @@
-import{_ as o,u as e,o as s,c as r}from"./index.9d4c4d12.js";const u={setup(){return{auth_store:e()}},mounted(){this.auth_store.logout(),this.$router.push("/")}};function n(t,a,c,_,p,h){return s(),r("h1",null,"Logout")}const l=o(u,[["render",n]]);export{l as default};
