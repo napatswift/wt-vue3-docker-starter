@@ -1,0 +1,1 @@
+import{_ as e,o as s,c as o,a as t}from"./index.9d4c4d12.js";const a={},c={class:"mx-8"},r=t("h1",{class:"text-3xl"},"This is an about page",-1),_=t("a",{class:"text-2xl text-blue-500",href:"https://github.com/saacsos/vue3-docker-starter",target:"_blank"}," vue3-docker-starter ",-1),n=[r,_];function i(d,l){return s(),o("div",c,n)}const u=e(a,[["render",i]]);export{u as default};
