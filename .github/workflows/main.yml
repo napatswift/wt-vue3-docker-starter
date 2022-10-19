@@ -1,5 +1,7 @@
 name: Build and deploy to gh-page
-on: push
+on: [push, pull_request]
+permissions:
+  contents: write
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
